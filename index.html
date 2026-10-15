@@ -1,0 +1,295 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Junior Stream Curriculum</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style id="cc-style">
+/* Layout: three views (Curriculum, Players, Sessions) under one header; present mode is a full-screen court-side display. One text face (Atkinson Hyperlegible) for everything; Barlow Condensed only for the wordmark, slide headline and timer. */
+:root{
+  --bg:#e9eef2; --surface:#f6f8fa; --ink:#1c2b3d; --muted:#4b5a6d; --line:#d3dbe3; --line-hi:#b3c0cd;
+  --court:#2a5d8f; --act:#3d7a5a; --act-hover:#33694d; --act-ink:#ffffff; --hi:#c8d27a;
+  --stage:#0f1c2e; --stage-fg:#e8edf3; --stage-line:rgba(232,237,243,.26);
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1622;--surface:#16212f;--ink:#e6edf5;--muted:#b0bfd0;--line:#2a3a4e;--line-hi:#3d5068;--court:#7aaee6;--act:#3f8562;--act-hover:#4a9370;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1622;--surface:#16212f;--ink:#e6edf5;--muted:#b0bfd0;--line:#2a3a4e;--line-hi:#3d5068;--court:#7aaee6;--act:#3f8562;--act-hover:#4a9370;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+a{color:var(--court);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--court);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px;display:flex;flex-direction:column;gap:16px}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+h1{font-family:var(--display);font-weight:700;font-size:36px;line-height:1;letter-spacing:.02em;margin:0;text-transform:uppercase}
+h2{font-family:var(--body);font-weight:700;font-size:20px;line-height:1.25;margin:0;text-wrap:balance}
+.views{display:flex;gap:4px;background:var(--surface);border:1px solid var(--line-hi);border-radius:8px;padding:3px;align-self:flex-start;flex-wrap:wrap}
+.view{border:none;background:none;border-radius:6px;padding:7px 16px;font-weight:700;font-size:15px;color:var(--muted)}
+.view:hover{color:var(--ink)}
+.view[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.btn{border:1.5px solid var(--line-hi);background:var(--surface);border-radius:6px;padding:7px 14px;font-weight:700;font-size:15px;line-height:1.3}
+.btn:hover{border-color:var(--court)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.ball{background:var(--act);color:var(--act-ink);border-color:var(--act)}
+.btn.ball:hover{background:var(--act-hover);border-color:var(--act-hover)}
+.btn[disabled]{opacity:.4;cursor:not-allowed}
+.tabs{display:flex;flex-wrap:wrap;gap:2px 6px;border-bottom:1px solid var(--line-hi)}
+.tab{font-family:var(--body);font-size:16px;font-weight:700;border:none;background:none;padding:8px 10px;margin-bottom:-1px;border-bottom:3px solid transparent;color:var(--muted)}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--court)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:20px;align-items:start}
+@media (max-width:820px){.grid{grid-template-columns:minmax(0,1fr)}}
+.col{display:flex;flex-direction:column;gap:12px;min-width:0}
+.lv{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.lv h3{font-family:var(--body);font-weight:700;font-size:19px;line-height:1.25;margin:0;display:flex;gap:10px;align-items:center;flex-wrap:wrap;text-wrap:balance}
+.n{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;flex:0 0 auto;border-radius:999px;background:var(--court);color:var(--surface);font-size:15px;font-weight:700;font-variant-numeric:tabular-nums}
+.who{font-family:var(--body);font-size:14px;font-weight:400;color:var(--muted)}
+.lv p{margin:0;max-width:68ch}
+.k{font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row.end{justify-content:flex-end}
+.row.between{justify-content:space-between}
+.play{text-decoration:none;font-weight:700;font-size:14px;color:var(--court);border:1.5px solid var(--court);border-radius:6px;padding:4px 12px}
+.play.set{background:var(--court);color:var(--surface)}
+.vid{position:relative;width:100%;max-width:560px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#000;border:none;padding:0;display:block}
+.vid img{width:100%;height:100%;object-fit:cover;display:block;opacity:.85}
+.vid .pi{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:42px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.vid .ts{position:absolute;right:8px;bottom:6px;background:rgba(0,0,0,.72);color:#fff;font-size:13px;padding:2px 7px;border-radius:4px;font-variant-numeric:tabular-nums}
+.vid iframe{width:100%;height:100%;border:0;display:block}
+.icon{border:1.5px solid var(--line-hi);background:var(--surface);border-radius:6px;width:34px;height:34px;padding:0}
+.icon:hover:not([disabled]){border-color:var(--court)}
+.icon[disabled]{opacity:.35;cursor:not-allowed}
+span.on{font-size:14px;font-weight:700;color:var(--court);margin-right:auto}
+.panel{background:var(--surface);border:1.5px solid var(--line-hi);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.sticky{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px)}
+@media (max-width:820px){.sticky{position:static}}
+ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+ol li span{display:inline-flex;justify-content:space-between;width:100%;gap:6px;align-items:center}
+.x{border:none;background:none;color:var(--muted);font-size:18px;padding:0 6px;border-radius:4px}
+.x:hover{color:var(--ink)}
+.muted{color:var(--muted);font-size:15px;margin:0}
+.chip{display:inline-block;font-size:13px;font-weight:700;border-radius:999px;padding:2px 10px;background:var(--bg);border:1px solid var(--line-hi)}
+.chip.fit{background:var(--act);color:var(--act-ink);border-color:var(--act)}
+input,textarea,select{font:inherit;font-size:16px;color:var(--ink);background:var(--surface);border:1px solid var(--line-hi);border-radius:6px;padding:8px 10px;width:100%}
+input:focus,textarea:focus,select:focus{border-color:var(--court)}
+textarea{min-height:64px;resize:vertical}
+label{display:flex;flex-direction:column;gap:4px;font-size:15px;font-weight:700;color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{font-family:var(--body);font-weight:700;font-size:14px;color:var(--muted)}
+td select{width:auto;padding:5px 8px;font-size:15px}
+tfoot td{font-weight:700;background:var(--bg);border-bottom:0}
+.slist{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+.slist button{width:100%;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:8px 12px;font-size:15px}
+.slist button:hover{border-color:var(--line-hi)}
+.slist button[aria-current="true"]{border-color:var(--court);box-shadow:inset 0 0 0 1px var(--court);font-weight:700}
+.scrim{position:fixed;inset:0;background:rgba(10,20,35,.5);display:flex;justify-content:flex-end;z-index:20}
+.drawer{background:var(--surface);width:min(500px,100%);height:100%;overflow:auto;padding:calc(20px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) 20px;display:flex;flex-direction:column;gap:12px}
+.present{position:fixed;inset:0;background:var(--stage);color:var(--stage-fg);z-index:30;display:flex;flex-direction:column;gap:16px;overflow:auto;padding:calc(16px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px))}
+.present .btn{background:transparent;color:var(--stage-fg);border-color:var(--stage-line)}
+.present .btn:hover{border-color:var(--hi)}
+.present .btn.ball{background:var(--act);color:var(--act-ink);border-color:var(--act)}
+.present .btn.on{background:var(--stage-fg);color:var(--stage);border-color:var(--stage-fg)}
+.pm{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;max-width:1000px;margin:0 auto;width:100%}
+.pt{font-family:var(--display);font-weight:700;font-size:clamp(40px,7vw,80px);line-height:.95;margin:0;text-transform:uppercase;text-wrap:balance}
+.pl{font-family:var(--body);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:clamp(14px,1.8vw,18px);color:var(--hi);margin:0}
+.pb{font-size:clamp(22px,3.2vw,34px);line-height:1.35;margin:0;max-width:40ch}
+.present .vid{max-width:820px}
+.present .play{font-size:18px;padding:10px 18px;background:var(--act);color:var(--act-ink);border-color:var(--act)}
+.timer{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;border-top:1px solid var(--stage-line);padding-top:14px}
+.clock{font-family:var(--display);font-weight:700;font-size:clamp(44px,8vw,80px);font-variant-numeric:tabular-nums;min-width:4ch;text-align:center;line-height:1}
+.clock.done{color:var(--hi)}
+.cnt{font-family:var(--body);font-size:13px;font-weight:400;color:var(--muted);margin-left:6px}
+.whobtn{border:none;background:none;padding:0;font-size:14px;color:var(--muted);text-decoration:underline dotted;text-underline-offset:3px;font-weight:400}
+.whobtn:hover{color:var(--ink)}
+.names{font-size:15px;color:var(--ink);margin:0}
+fieldset{border:1px solid var(--line-hi);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:10px;margin:0}
+legend{font-family:var(--body);font-weight:700;font-size:16px;padding:0 6px}
+.hint{font-size:14px;font-weight:400;color:var(--muted)}
+.pchip{border:1.5px solid var(--stage-line);background:transparent;color:var(--stage-fg);border-radius:999px;padding:8px 16px;font-weight:700;font-size:16px}
+.pchip[aria-pressed="true"]{background:var(--act);color:var(--act-ink);border-color:var(--act)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:6px;font-size:15px;z-index:40;max-width:calc(100% - 32px)}
+@media (max-width:560px){h1{font-size:30px}.lv{padding:14px}.two{grid-template-columns:1fr}}
+</style>
+<div id="app"></div>
+<script type="application/json" id="cc-state">
+{"skills": [{"id": "dinks", "name": "Dinks", "levels": [{"id": "d1", "title": "Soft hands, long rally", "pro": "Anna Leigh Waters", "cue": "Paddle face stays open; lift comes from the knees, not the wrist.", "query": "PPA Streamed Courts Anna Leigh Waters dinking", "url": "", "start": "", "end": "", "drill": "Streak dinks", "how": "Pairs dink straight across, count out loud, a miss resets to zero. Team total vs last week.", "pass": "20 in a row, twice", "src": "https://pictona.org/pickleball-first-steps/", "ch": ""}, {"id": "d2", "title": "Dink to a target", "pro": "Waters / Bright", "cue": "Where each dink lands against the opponent's feet; feet set before contact.", "query": "Waters Bright Parenteau Rohrabacher", "url": "", "start": "", "end": "", "drill": "Foot targets", "how": "Inside foot to inside foot, then outside to outside. Straight, then crosscourt. First to 10 hits.", "pass": "8 of 10 on target", "src": "https://www.dupr.com/post/mastering-the-kitchen-a-3-step-drill-progression-for-consistent-dinking", "ch": "@PPAtour"}, {"id": "d3", "title": "Dink and move", "pro": "Ben Johns", "cue": "Small shuffle steps between shots, no crossover, back to ready before the opponent hits.", "query": "PPA Streamed Courts Ben Johns dinking", "url": "", "start": "", "end": "", "drill": "Two dinks & move", "how": "Two dinks, shuffle to the other side, repeat. Then one dink and move. Finish live ball to 7.", "pass": "60 seconds without losing balance", "src": "https://primetimepickleball.com/pro-level-pickleball-practice/", "ch": ""}, {"id": "d4", "title": "Dink, speed up, block", "pro": "Anna Leigh & Leigh Waters", "cue": "The speed-up looks like a dink until contact.", "query": "Anna Leigh Waters speed up", "url": "https://www.youtube.com/watch?v=K9tX7F1U2wk", "start": "", "end": "", "drill": "Dink, speed up, block", "how": "Dink, speed up at the body, partner blocks soft. Then skinny singles to 11: speeding up a low ball loses the point.", "pass": "Right choice 8 of 10", "src": "https://www.thedinkpickleball.com/6-progressive-pickleball-drills-that-take-you-from-3-0-to-5-0/", "ch": "@PPAtour"}]}, {"id": "resets", "name": "Resets", "levels": [{"id": "r1", "title": "Block it soft", "pro": "Ben Johns", "cue": "Paddle out front and still; both feet down at contact.", "query": "Ben Johns firefight", "url": "", "start": "", "end": "", "drill": "Inside-out resets", "how": "Start inside the kitchen, block medium feeds back into the kitchen. After 10, step back to the line. Bucket of 20, beat your score.", "pass": "8 of 10 from the line", "src": "https://www.thedinkpickleball.com/why-your-pickleball-reset-keeps-popping-up/", "ch": "@PPAtour"}, {"id": "r2", "title": "Reset and step", "pro": "Gabe Tardio", "cue": "Split step, land balanced, then hit. Move up only after a good reset.", "query": "Johns Tardio Alshon Daescu Las Vegas", "url": "", "start": "", "end": "", "drill": "Reset ladder", "how": "From mid-court, each good reset earns a step forward, a pop-up costs one. Race on two courts to the line.", "pass": "To the line in under 10 balls", "src": "https://www.thedinkpickleball.com/pickleball-reset-drill-to-master-the-transition-zone/", "ch": "@PPAtour"}, {"id": "r3", "title": "Counter or reset", "pro": "Johns / Waters", "cue": "Knee-high ball gets reset, chest-high ball gets countered.", "query": "Johns Waters Alshon Black Masters", "url": "", "start": "", "end": "", "drill": "Counter-reset", "how": "Attack, reset, attack, reset. Then free choice; coach calls red or green light to switch who may attack.", "pass": "Right choice 8 of 10", "src": "https://www.thedinkpickleball.com/how-to-hit-pickleball-resets-under-pressure/", "ch": "@PPAtour"}, {"id": "r4", "title": "Drive, drop, reset game", "pro": "Leigh & Anna Leigh Waters", "cue": "Count the shots it takes them to reach the line.", "query": "Waters Daytona women's doubles", "url": "", "start": "", "end": "", "drill": "Drive, drop & reset", "how": "Drive, drop, reset while moving up, then play it out. A point only counts if the serving team reached the line.", "pass": "To the line in 6 of 10 points", "src": "https://playpickleball.com/pickleball-drive-drop-reset-drill-game", "ch": "@PPAtour"}]}, {"id": "drops", "name": "Third shot drop", "levels": [{"id": "t1", "title": "Drop from close, then back", "pro": "Ben Johns", "cue": "Low-to-high lift; the ball peaks on their side and falls into the kitchen.", "query": "Pickleball Studio slow motion third shot drop", "url": "", "start": "", "end": "", "drill": "Step-back drops", "how": "Start at the kitchen line hitting drops into the kitchen. Every 5 good ones, take a step back, until you reach the baseline.", "pass": "5 good drops from the baseline", "src": "https://www.thedinkpickleball.com/the-rubber-band-drill-to-master-pickleball-resets/", "ch": ""}, {"id": "t2", "title": "Drive or drop", "pro": "Anna Bright", "cue": "Same setup for drive and drop until contact; the choice comes from the ball height.", "query": "Pickleball Studio slow motion Anna Bright", "url": "", "start": "", "end": "", "drill": "Choose on every ball", "how": "Feeder hits deep returns. Choose drive or drop on each one, then follow it in.", "pass": "Right choice 7 of 10", "src": "https://www.thedinkpickleball.com/5-50-pickleball-drills-to-improve-drives-drops-and-volleys/", "ch": ""}, {"id": "t3", "title": "Drop and close", "pro": "Johns / Tardio", "cue": "They follow a good drop in and split step every time the opponent hits.", "query": "PPA Streamed Courts Johns Tardio", "url": "", "start": "", "end": "", "drill": "Ladder to the line", "how": "Serving team drops, moves up a step per good shot, and plays it out once at the line.", "pass": "Reach the line in 6 of 10 points", "src": "https://www.thedinkpickleball.com/master-the-pickleball-transition-zone-with-this-ladder-drill/", "ch": ""}, {"id": "t4", "title": "Drop under pressure", "pro": "Junior PPA players", "cue": "The drop still goes up and over softly even when the returners crowd the line.", "query": "18U doubles third shot drop", "url": "", "start": "", "end": "", "ch": "@JuniorPPATour", "drill": "Drop and defend", "how": "Serving team must drop the third, then play it out. Returners may attack any drop above net height.", "pass": "Serving team wins 5 of 10 points", "src": ""}]}, {"id": "serve", "name": "Serve & return", "levels": [{"id": "s1", "title": "Deep and in", "pro": "Anna Leigh Waters", "cue": "Contact out front, swing through to the target, finish high.", "query": "Pickleball Studio slow motion serve", "url": "", "start": "", "end": "", "drill": "Target serves", "how": "Cones in the back third. 10 serves each, a point per ball past the cones.", "pass": "7 of 10 in the back third", "src": "https://thedinkpickleball.com/the-only-six-pickleball-drills-youll-ever-need-thatpickleballguy", "ch": ""}, {"id": "s2", "title": "Return and run", "pro": "Junior PPA players", "cue": "Deep return, and they're set at the line before the third shot lands.", "query": "18U doubles", "url": "", "start": "", "end": "", "drill": "Return and race", "how": "Return deep and sprint to the line. Feeder hits the third; the returner must be set at the line.", "pass": "Set at the line 8 of 10", "src": "https://thedinkpickleball.com/the-only-six-pickleball-drills-youll-ever-need-thatpickleballguy", "ch": "@JuniorPPATour"}, {"id": "s3", "title": "Serve with a plan", "pro": "Anna Leigh Waters", "cue": "Where she aims before the toss: deep to the backhand or the middle.", "query": "Anna Leigh Waters serve", "url": "", "start": "", "end": "", "ch": "@PPAtour", "drill": "Call your serve", "how": "Call the target (backhand, middle, body) before each serve. A point for hitting it.", "pass": "Hits the called target 6 of 10", "src": "https://pickleball.com/learn/anna-leigh-waters-leigh-waters-share-pickleball-knowledge-aplenty-on-youtube-with-kyle-koszuta"}, {"id": "s4", "title": "Serve and return game", "pro": "Junior PPA players", "cue": "Deep serve, deep return, returner set at the line before the third bounces.", "query": "16U doubles", "url": "", "start": "", "end": "", "ch": "@JuniorPPATour", "drill": "Deep-or-nothing to 11", "how": "Serving team only scores if the serve lands in the back third; returners only score if they were set at the line before the third shot.", "pass": "Wins the game", "src": ""}]}, {"id": "hands", "name": "Volleys", "levels": [{"id": "v1", "title": "Paddle up, punch", "pro": "Junior PPA players", "cue": "Paddle stays up in front of the chest; a short punch, no swing.", "query": "16U doubles", "url": "", "start": "", "end": "", "drill": "Wall volleys", "how": "Volley against a wall from 7 feet. Count the streak, then alternate forehand and backhand.", "pass": "30 in a row", "src": "https://www.thedinkpickleball.com/14-pickleball-wall-drills-that-build-real-game-skills/", "ch": "@JuniorPPATour"}, {"id": "v2", "title": "Figure-eight volleys", "pro": "Ben Johns", "cue": "Hands reset to ready after every ball.", "query": "PPA Streamed Courts Ben Johns", "url": "", "start": "", "end": "", "drill": "Figure eight", "how": "Partners volley in a figure eight: one hits straight, the other crosscourt. Swap after 2 minutes.", "pass": "1 minute without a miss", "src": "https://www.thedinkpickleball.com/4-pickleball-drills-that-take-you-from-4-0-to-5-0/", "ch": ""}, {"id": "v3", "title": "Speed-up and counter", "pro": "Johns / Tardio", "cue": "Paddle up early; they counter the high ball and reset the low one.", "query": "Johns Tardio firefight", "url": "", "start": "", "end": "", "ch": "@PPAtour", "drill": "Speed up and reset", "how": "One player speeds up at the body; the other counters if it is high or resets if it is low. Swap every 5.", "pass": "Survives 3 of 5 firefights", "src": "https://www.thedinkpickleball.com/4-pickleball-drills-that-take-you-from-4-0-to-5-0/"}, {"id": "v4", "title": "Volley the drive", "pro": "Anna Bright", "cue": "Paddle out front, soft block on hard drives, step in on the high ones.", "query": "Anna Bright volley drive", "url": "", "start": "", "end": "", "ch": "@PPAtour", "drill": "Drive and volley pairs", "how": "Baseline player drives; kitchen player volleys back deep or blocks soft. Swap after 10.", "pass": "8 of 10 volleys land in", "src": ""}]}], "players":[], "sessions": [{"id": "w1", "date": "2026-10-20", "title": "Week 1: The soft game", "warm": "Skinny singles dinking, 5 minutes.", "items": ["d1", "r1"], "finish": "King of the court: dink-only points to 5."}, {"id": "w2", "date": "2026-10-27", "title": "Week 2: Aim small", "warm": "Partner volley streaks, 5 minutes.", "items": ["d2", "v1"], "finish": "Target-dink ladder: winners move up a court."}, {"id": "w3", "date": "2026-11-03", "title": "Week 3: Start the point", "warm": "Dinks and volleys, 5 minutes.", "items": ["s1", "t1"], "finish": "Serve, drop and play to 7."}, {"id": "w4", "date": "2026-11-10", "title": "Week 4: Survive and reset", "warm": "Figure-eight volleys, 5 minutes.", "items": ["r2", "v2"], "finish": "Reset race on two courts."}, {"id": "w5", "date": "2026-11-17", "title": "Week 5: Move and choose", "warm": "Skinny singles dinking, 5 minutes.", "items": ["d3", "t2"], "finish": "Skinny singles to 11."}, {"id": "w6", "date": "2026-11-24", "title": "Week 6: Put it together", "warm": "Dinks, drops and volleys, 8 minutes.", "items": ["r3", "s2"], "finish": "Mini tournament: points only count once the serving team reached the line."}], "cur": "w1"}
+</script>
+<script id="cc-app">
+(function(){
+var state;try{state=JSON.parse(document.getElementById('cc-state').textContent);}catch(e){state={skills:[],players:[],sessions:[],cur:null};}
+var HOSTED=!window.claude;
+if(HOSTED){try{var ls=localStorage.getItem('jsc-board3');if(ls)state=JSON.parse(ls);}catch(e){}}
+var STYLE=document.getElementById('cc-style').textContent,APP=document.getElementById('cc-app').textContent;
+var ui={view:'curriculum',skill:(state.skills[0]||{}).id,edit:null,present:null,dirty:false,ro:false,saving:false,live:{},del:false};
+var T={left:0,total:0,iv:null};
+var art=null;if(!HOSTED)window.claude.use('artifact').then(function(a){art=a;}).catch(function(){});
+var app=document.getElementById('app');
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function secs(v){v=String(v||'').trim();if(!v)return 0;if(/^\d+$/.test(v))return +v;return v.split(':').map(Number).reduce(function(a,b){return a*60+(b||0);},0)||0;}
+function mmss(s){return Math.floor(s/60)+':'+('0'+s%60).slice(-2);}
+function vid(u){var m=String(u||'').match(/(?:youtu\.be\/|[?&]v=|\/shorts\/|\/live\/|\/embed\/)([A-Za-z0-9_-]{11})/);return m?m[1]:null;}
+function uid(p){return p+Date.now().toString(36)+Math.random().toString(36).slice(2,5);}
+function play(l,key){
+  var id=vid(l.url),s=secs(l.start),e=secs(l.end),k=key||l.id;
+  if(HOSTED&&id){
+    if(ui.live[k])return '<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&start='+s+(e>s?'&end='+e:'')+'" title="'+esc(l.title)+' clip" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>';
+    return '<button class="vid" data-a="load" data-id="'+k+'" aria-label="Play '+esc(l.title)+' clip"><img src="https://i.ytimg.com/vi/'+id+'/hqdefault.jpg" alt=""><span class="pi">▶</span><span class="ts">'+mmss(s)+(e>s?' – '+mmss(e):'')+'</span></button>';}
+  if(id)return '<a class="play set" href="https://www.youtube.com/watch?v='+id+(s?'&t='+s+'s':'')+'" target="_blank" rel="noopener">▶ Play'+(s?' from '+mmss(s):'')+'</a>';
+  var q=encodeURIComponent(l.query||l.pro),CH={'@PPAtour':'PPA Tour','@JuniorPPATour':'Junior PPA'};
+  if(l.ch)return '<a class="play" href="https://www.youtube.com/'+encodeURIComponent(l.ch).replace('%40','@')+'/search?query='+q+'" target="_blank" rel="noopener">Find on '+esc(CH[l.ch]||l.ch)+'</a>';
+  return '<a class="play" href="https://www.youtube.com/results?search_query='+q+'" target="_blank" rel="noopener">Find clip</a>';}
+function find(id){for(var i=0;i<state.skills.length;i++){var s=state.skills[i];for(var j=0;j<s.levels.length;j++)if(s.levels[j].id===id)return{s:s,l:s.levels[j],i:j};}return null;}
+function skill(){return state.skills.find(function(s){return s.id===ui.skill;})||state.skills[0];}
+function sess(){return state.sessions.find(function(s){return s.id===state.cur;})||state.sessions[0];}
+function toast(m){var t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);setTimeout(function(){t.remove();},2600);}
+function dirty(){if(HOSTED){try{localStorage.setItem('jsc-board3',JSON.stringify(state));}catch(e){}return;}ui.dirty=true;}
+// group level per skill: median of players' current levels (0 = not started)
+function groupLevel(sid){var v=state.players.map(function(p){return p.lv[sid]||0;}).sort(function(a,b){return a-b;});if(!v.length)return null;return v[Math.floor((v.length-1)/2)];}
+function nextFor(sid){var g=groupLevel(sid);return g==null?null:g+1;}
+
+function card(l,i,n,sk){var S=sess(),inS=S&&S.items.indexOf(l.id)>=0,fit=nextFor(sk.id)===i+1;
+  var count=state.players.filter(function(p){return (p.lv[sk.id]||0)+1===i+1;}).length;
+  return '<article class="lv"><h3><span class="n">'+(i+1)+'</span>'+esc(l.title)+(fit?' <span class="chip fit">Group is here</span>':'')+(count?' <button class="whobtn" data-a="who" data-id="'+l.id+'">'+count+' player'+(count>1?'s':'')+' working on this</button>':'')+'</h3>'+
+  (ui.who===l.id?'<p class="names">'+esc(state.players.filter(function(p){return (p.lv[sk.id]||0)===i;}).map(function(p){return p.name;}).join(', '))+'</p>':'')+
+  '<p><span class="k">Watch</span> '+esc(l.pro)+': '+esc(l.cue)+'</p><div class="row">'+play(l)+(vid(l.url)?'':'<span class="muted">No clip yet</span>')+'</div>'+
+  '<p><span class="k">Drill</span> '+(l.src?'<a href="'+esc(l.src)+'" target="_blank" rel="noopener">'+esc(l.drill)+'</a>':esc(l.drill))+': '+esc(l.how)+'</p>'+
+  '<p><span class="k">Move up</span> '+esc(l.pass)+'</p>'+
+  '<div class="row end">'+(inS?'<span class="on">In session</span>':'')+
+  '<button class="icon" data-a="up" data-id="'+l.id+'" aria-label="Move up"'+(i?'':' disabled')+'>↑</button>'+
+  '<button class="icon" data-a="down" data-id="'+l.id+'" aria-label="Move down"'+(i<n-1?'':' disabled')+'>↓</button>'+
+  '<button class="btn ghost" data-a="edit" data-id="'+l.id+'">Edit</button>'+
+  (inS||!S?'':'<button class="btn ball" data-a="add" data-id="'+l.id+'">+ Session</button>')+'</div></article>';}
+
+function sessionMini(){var S=sess();if(!S)return '<aside class="panel sticky"><h2>Session</h2><p class="muted">No sessions yet.</p><button class="btn ball" data-a="newsess">+ New session</button></aside>';
+  var items=S.items.map(find).filter(Boolean);
+  return '<aside class="panel sticky"><div class="row between"><h2>Session</h2><button class="btn ghost" data-a="newsess">+ New</button></div>'+
+  '<select id="cursess" aria-label="Choose session">'+state.sessions.slice().sort(function(a,b){return a.date<b.date?1:-1;}).map(function(o){return '<option value="'+o.id+'"'+(o.id===S.id?' selected':'')+'>'+esc(o.date)+' · '+esc(o.title||'Untitled')+'</option>';}).join('')+'</select>'+
+  (items.length?'<ol>'+items.map(function(f){return '<li><span>'+esc(f.l.title)+' <span class="muted">'+esc(f.s.name)+'</span><button class="x" data-a="rm" data-id="'+f.l.id+'" aria-label="Remove">×</button></span></li>';}).join('')+'</ol>':'<p class="muted">Add levels with + Session.</p>')+
+  '<button class="btn ball" data-a="present"'+(items.length?'':' disabled')+'>Present</button></aside>';}
+
+function viewCurriculum(){var sk=skill();
+  return '<nav class="tabs" role="tablist">'+state.skills.map(function(s){return '<button class="tab" role="tab" aria-selected="'+(sk&&s.id===sk.id)+'" data-a="tab" data-id="'+s.id+'">'+esc(s.name)+'<span class="cnt" title="Levels with a clip">'+s.levels.filter(function(l){return vid(l.url);}).length+'/'+s.levels.length+' clips</span></button>';}).join('')+'<button class="tab" data-a="newskill">+ Skill</button></nav>'+
+  '<div class="grid"><div class="col">'+(sk?sk.levels.map(function(l,i){return card(l,i,sk.levels.length,sk);}).join('')+'<div class="row"><button class="btn ghost" data-a="newlevel">+ Level</button><button class="btn ghost" data-a="rename">Rename skill</button></div>':'')+'</div>'+sessionMini()+'</div>';}
+
+function viewPlayers(){
+  var head='<tr><th>Player</th>'+state.skills.map(function(s){return '<th>'+esc(s.name)+'</th>';}).join('')+'<th></th></tr>';
+  var rows=state.players.map(function(p){return '<tr><td><input id="pn-'+p.id+'" data-p="'+p.id+'" data-f="name" value="'+esc(p.name)+'" aria-label="Player name" style="width:130px"></td>'+
+    state.skills.map(function(s){var v=p.lv[s.id]||0;return '<td><select id="pl-'+p.id+'-'+s.id+'" data-p="'+p.id+'" data-s="'+s.id+'" aria-label="'+esc(p.name)+' '+esc(s.name)+' level"><option value="0"'+(v?'':' selected')+'>—</option>'+s.levels.map(function(l,i){return '<option value="'+(i+1)+'"'+(v===i+1?' selected':'')+'>L'+(i+1)+' passed</option>';}).join('')+'</select></td>';}).join('')+
+    '<td><button class="x" data-a="rmplayer" data-id="'+p.id+'" aria-label="Remove player">×</button></td></tr>';}).join('');
+  var foot='<tr><td>Group works on</td>'+state.skills.map(function(s){var n=nextFor(s.id);return '<td>'+(n==null?'—':n>s.levels.length?'All passed':'L'+n)+'</td>';}).join('')+'<td></td></tr>';
+  return '<div class="row between"><h2>Players</h2><button class="btn ghost" data-a="addplayer">+ Player</button></div>'+
+  '<p class="muted">Mark the last level each player has passed. "Group works on" is the next level for the middle of the group, and it is flagged on the curriculum.</p>'+
+  '<div class="tablewrap"><table><thead>'+head+'</thead><tbody>'+rows+'</tbody><tfoot>'+foot+'</tfoot></table></div>'+
+  '<p class="muted">The rows shown are examples. Replace them with your players; keep this page private since it names kids.</p>';}
+
+function viewSessions(){var S=sess();
+  var list='<ul class="slist">'+state.sessions.slice().sort(function(a,b){return a.date<b.date?1:-1;}).map(function(s){return '<li><button data-a="pick" data-id="'+s.id+'" aria-current="'+(S&&s.id===S.id)+'">'+esc(s.date)+' · '+esc(s.title||'Untitled')+'</button></li>';}).join('')+'</ul>';
+  var body='';
+  if(S){var items=S.items.map(find).filter(Boolean);
+    body='<div class="panel"><div class="two"><label>Date<input type="date" id="sd" data-sf="date" value="'+esc(S.date)+'"></label><label>Title<input id="st" data-sf="title" value="'+esc(S.title)+'"></label></div>'+
+    '<label>Warm-up<textarea id="sw" data-sf="warm">'+esc(S.warm)+'</textarea></label>'+
+    '<div><div class="k" style="font-size:13px;color:var(--muted)">Levels (add from Curriculum)</div>'+(items.length?'<ol>'+items.map(function(f,i){return '<li><span>'+esc(f.s.name)+' L'+(f.i+1)+': '+esc(f.l.title)+'<span class="row"><button class="icon" data-a="sup" data-i="'+i+'" aria-label="Earlier"'+(i?'':' disabled')+'>↑</button><button class="icon" data-a="sdown" data-i="'+i+'" aria-label="Later"'+(i<items.length-1?'':' disabled')+'>↓</button><button class="x" data-a="rm" data-id="'+f.l.id+'" aria-label="Remove">×</button></span></span></li>';}).join('')+'</ol>':'<p class="muted">None yet.</p>')+'</div>'+
+    '<label>Finish game<textarea id="sf" data-sf="finish">'+esc(S.finish)+'</textarea></label>'+
+    '<div class="row between"><button class="btn ghost" data-a="delsess">'+(ui.del==='sess'?'Tap again to delete':'Delete session')+'</button><span class="row"><button class="btn ghost" data-a="dupsess">Duplicate</button><button class="btn ball" data-a="present"'+(items.length||S.warm||S.finish?'':' disabled')+'>Present</button></span></div></div>';}
+  return '<div class="grid"><div class="col">'+(body||'<p class="muted">No sessions yet.</p>')+'</div><aside class="panel"><div class="row between"><h2>Sessions</h2><button class="btn ghost" data-a="newsess">+ New</button></div>'+list+'</aside></div>';}
+
+function render(){
+  var h='<div class="wrap"><div class="top"><h1>Junior Stream</h1>'+(HOSTED?'<span class="muted">Changes save automatically on this device</span>':ui.ro?'<span class="muted">View only</span>':ui.dirty||ui.saving?'<span class="row"><span class="muted">Unsaved changes</span><button class="btn ball" data-a="save"'+(ui.saving?' disabled':'')+'>'+(ui.saving?'Saving…':'Save changes')+'</button></span>':'<span class="muted">All changes saved</span>')+'</div>'+
+  '<nav class="views" role="tablist">'+[['curriculum','Curriculum'],['players','Players'],['sessions','Sessions']].map(function(v){return '<button class="view" role="tab" aria-selected="'+(ui.view===v[0])+'" data-a="view" data-id="'+v[0]+'">'+v[1]+'</button>';}).join('')+'</nav>'+
+  (ui.view==='players'?viewPlayers():ui.view==='sessions'?viewSessions():viewCurriculum())+'</div>';
+  if(ui.edit)h+=editor();
+  if(ui.present!=null)h+=present();
+  app.innerHTML=h;
+}
+function editor(){var f=find(ui.edit);if(!f)return'';var l=f.l;
+  function i(k,lab,ph,hint){return '<label>'+lab+(hint?' <span class="hint">'+hint+'</span>':'')+'<input id="e-'+k+'" value="'+esc(l[k])+'"'+(ph?' placeholder="'+ph+'"':'')+'></label>';}
+  function ta(k,lab){return '<label>'+lab+'<textarea id="e-'+k+'">'+esc(l[k])+'</textarea></label>';}
+  return '<div class="scrim" data-a="close"><form class="drawer" role="dialog" aria-label="Edit level"><h2>'+esc(f.s.name)+' · Level '+(f.i+1)+'</h2>'+i('title','Level name')+
+  '<fieldset><legend>Gold standard clip</legend>'+i('pro','Player(s)')+ta('cue','What to watch for')+
+  i('url','YouTube link','https://youtu.be/…','paste a link copied at the right moment and the start fills in')+'<div class="two">'+i('start','Start','0:42')+i('end','Stop','1:05')+'</div>'+
+  '<div class="two">'+i('ch','Search in channel','@PPAtour')+i('query','Search words')+'</div></fieldset>'+
+  '<fieldset><legend>Drill</legend>'+i('drill','Drill name')+ta('how','How it runs')+i('pass','Move up when')+i('src','Where the drill came from (link)')+'</fieldset>'+
+  '<div class="row between"><button type="button" class="btn ghost" data-a="del">'+(ui.del==='lv'?'Tap again to delete':'Delete level')+'</button><span class="row"><button type="button" class="btn ghost" data-a="close">Cancel</button><button class="btn primary">Done</button></span></div></form></div>';}
+function steps(){var S=sess();if(!S)return[];var out=[];if(S.warm)out.push({k:'warm'});S.items.map(find).filter(Boolean).forEach(function(f){out.push({k:'lv',f:f});});if(S.finish)out.push({k:'finish'});return out;}
+function present(){var st=steps(),n=st.length;if(!n)return'';var i=Math.max(0,Math.min(ui.present,n-1)),s=st[i],S=sess(),body;
+  if(s.k==='warm')body='<p class="pl">Warm-up</p><h2 class="pt">'+esc(S.title||'Today')+'</h2><p class="pb">'+esc(S.warm)+'</p>';
+  else if(s.k==='finish')body='<p class="pl">Finish</p><h2 class="pt">Game time</h2><p class="pb">'+esc(S.finish)+'</p>';
+  else{var l=s.f.l;body='<p class="pl">'+esc(s.f.s.name)+' · Level '+(s.f.i+1)+'</p><h2 class="pt">'+esc(l.title)+'</h2>'+
+    '<p class="pl">Watch · '+esc(l.pro)+'</p><p class="pb">'+esc(l.cue)+'</p><div>'+play(l,'p-'+l.id)+'</div>'+
+    '<p class="pl">Drill · '+esc(l.drill)+'</p><p class="pb">'+esc(l.how)+'</p><p class="pl">Move up · '+esc(l.pass)+'</p>';
+    var sid=s.f.s.id,li=s.f.i,pp=ui.passed||{},cands=state.players.filter(function(p){var v=p.lv[sid]||0;return v===li||(v===li+1&&pp[p.id+'|'+sid]);});
+    if(cands.length)body+='<div class="row"><span class="pl" style="margin-right:6px">Passed today?</span>'+cands.map(function(p){var on=!!pp[p.id+'|'+sid];return '<button class="pchip" data-a="pass" data-id="'+p.id+'" data-s="'+sid+'" data-i="'+li+'" aria-pressed="'+on+'">'+esc(p.name)+'</button>';}).join('')+'</div>';}
+  return '<div class="present" role="dialog" aria-label="Present"><div class="row between"><span>'+(i+1)+' / '+n+'</span><span class="row"><button class="btn" data-a="prev"'+(i?'':' disabled')+'>← Back</button><button class="btn ball" data-a="next"'+(i<n-1?'':' disabled')+'>Next →</button><button class="btn" data-a="exit">Exit</button></span></div>'+
+  '<div class="pm">'+body+'</div>'+
+  '<div class="timer"><span class="clock'+(T.total&&!T.left?' done':'')+'" id="clock">'+mmss(T.left)+'</span>'+[3,5,8,10].map(function(m){return '<button class="btn'+(T.total===m*60?' on':'')+'" data-a="tset" data-id="'+m+'">'+m+' min</button>';}).join('')+
+  '<button class="btn ball" data-a="tgo"'+(T.left?'':' disabled')+'>'+(T.iv?'Pause':'Start')+'</button></div></div>';}
+function tick(){if(T.left>0)T.left--;var c=document.getElementById('clock');if(c){c.textContent=mmss(T.left);if(!T.left)c.classList.add('done');}if(!T.left){clearInterval(T.iv);T.iv=null;render();}}
+function stopT(){if(T.iv)clearInterval(T.iv);T.iv=null;}
+var wake=null;function wakeOn(){try{if(navigator.wakeLock)navigator.wakeLock.request('screen').then(function(w){wake=w;}).catch(function(){});}catch(e){}}
+function wakeOff(){try{if(wake)wake.release();}catch(e){}wake=null;}
+
+function swap(a,i,j){var t=a[i];a[i]=a[j];a[j]=t;}
+function blank(){return{id:uid('l'),title:'New level',pro:'',cue:'',query:'',url:'',start:'',end:'',ch:'',drill:'',how:'',pass:'',src:''};}
+app.addEventListener('click',function(e){var b=e.target.closest('[data-a]');if(!b||b.disabled)return;var a=b.dataset.a,id=b.dataset.id,f,S=sess();
+  if(a==='close'&&b.classList.contains('scrim')&&e.target!==b)return;
+  if(a!=='del'&&a!=='delsess')ui.del=false;
+  if(a==='save')return save();
+  if(a==='load')ui.live[id]=true;
+  else if(a==='who')ui.who=ui.who===id?null:id;
+  else if(a==='pass'){var pl=state.players.find(function(x){return x.id===id;}),sid=b.dataset.s,li=+b.dataset.i,key=id+'|'+sid;ui.passed=ui.passed||{};if(ui.passed[key]){pl.lv[sid]=li;delete ui.passed[key];}else{pl.lv[sid]=li+1;ui.passed[key]=1;}dirty();}
+  else if(a==='view')ui.view=id;
+  else if(a==='tab')ui.skill=id;
+  else if(a==='up'||a==='down'){f=find(id);swap(f.s.levels,f.i,f.i+(a==='up'?-1:1));dirty();}
+  else if(a==='edit')ui.edit=id;
+  else if(a==='close')ui.edit=null;
+  else if(a==='add'){S.items.push(id);dirty();}
+  else if(a==='rm'){S.items=S.items.filter(function(x){return x!==id;});dirty();}
+  else if(a==='sup'||a==='sdown'){var i=+b.dataset.i;swap(S.items,i,i+(a==='sup'?-1:1));dirty();}
+  else if(a==='present'){ui.present=0;ui.live={};wakeOn();}
+  else if(a==='prev'||a==='next'){ui.present+=a==='next'?1:-1;ui.live={};}
+  else if(a==='exit'){ui.present=null;ui.live={};stopT();wakeOff();}
+  else if(a==='tset'){stopT();T.total=T.left=(+id)*60;}
+  else if(a==='tgo'){if(T.iv)stopT();else if(T.left)T.iv=setInterval(tick,1000);}
+  else if(a==='newskill'){var s={id:uid('s'),name:'New skill',levels:[]};state.skills.push(s);ui.skill=s.id;var nl=blank();s.levels.push(nl);ui.edit=nl.id;dirty();}
+  else if(a==='rename'){var sk=skill();var tab=app.querySelector('.tab[aria-selected="true"]');if(tab){var inp=document.createElement('input');inp.value=sk.name;inp.style.width='180px';inp.setAttribute('aria-label','Skill name');tab.replaceWith(inp);inp.focus();inp.select();inp.addEventListener('blur',function(){sk.name=inp.value.trim()||sk.name;dirty();render();});inp.addEventListener('keydown',function(k){if(k.key==='Enter')inp.blur();});}return;}
+  else if(a==='newlevel'){var l=blank();skill().levels.push(l);ui.edit=l.id;dirty();}
+  else if(a==='del'){if(ui.del!=='lv')ui.del='lv';else{f=find(ui.edit);f.s.levels.splice(f.i,1);state.sessions.forEach(function(x){x.items=x.items.filter(function(y){return y!==ui.edit;});});ui.edit=null;ui.del=false;dirty();}}
+  else if(a==='addplayer'){state.players.push({id:uid('p'),name:'New player',lv:{}});dirty();}
+  else if(a==='rmplayer'){state.players=state.players.filter(function(p){return p.id!==id;});dirty();}
+  else if(a==='pick')state.cur=id;
+  else if(a==='newsess'){var ns={id:uid('x'),date:new Date().toISOString().slice(0,10),title:'New session',warm:'',items:[],finish:''};state.sessions.push(ns);state.cur=ns.id;dirty();}
+  else if(a==='dupsess'){var d=JSON.parse(JSON.stringify(S));d.id=uid('x');d.title=(S.title||'Session')+' (copy)';state.sessions.push(d);state.cur=d.id;dirty();}
+  else if(a==='delsess'){if(ui.del!=='sess')ui.del='sess';else{state.sessions=state.sessions.filter(function(x){return x.id!==S.id;});state.cur=(state.sessions[0]||{}).id||null;ui.del=false;dirty();}}
+  render();});
+app.addEventListener('submit',function(e){e.preventDefault();var f=find(ui.edit);if(!f)return;
+  ['title','pro','cue','url','start','end','ch','query','drill','how','pass','src'].forEach(function(k){var el=document.getElementById('e-'+k);if(el)f.l[k]=el.value.trim();});
+  if(!f.l.title)f.l.title='Untitled';ui.edit=null;dirty();render();});
+app.addEventListener('input',function(e){if(e.target.id!=='e-url')return;var m=e.target.value.match(/[?&](?:t|start)=(?:(\d+)m)?(\d+)s?/);var st=document.getElementById('e-start');if(m&&st&&!st.value){st.value=mmss((+(m[1]||0))*60+(+m[2]));}});
+app.addEventListener('change',function(e){var t=e.target;
+  if(t.dataset.p){var p=state.players.find(function(x){return x.id===t.dataset.p;});if(!p)return;if(t.dataset.f==='name')p.name=t.value.trim()||p.name;else p.lv[t.dataset.s]=+t.value;dirty();render();}
+  else if(t.id==='cursess'){state.cur=t.value;dirty();render();}
+  else if(t.dataset.sf){var S=sess();S[t.dataset.sf]=t.value.trim();dirty();render();}});
+document.addEventListener('keydown',function(e){if(ui.present!=null){var n=steps().length;
+  if(e.key==='ArrowRight'&&ui.present<n-1){ui.present++;ui.live={};render();}else if(e.key==='ArrowLeft'&&ui.present>0){ui.present--;ui.live={};render();}else if(e.key==='Escape'){ui.present=null;stopT();wakeOff();render();}}
+  else if(ui.edit&&e.key==='Escape'){ui.edit=null;render();}});
+var RESET=':root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}img{max-width:100%}[hidden]{display:none!important}';
+function doc(){var SC='</'+'script>';
+  return '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>'+RESET+'</style></head><body>'+
+  '<title>Junior Stream Curriculum</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">\n'+
+  '<style id="cc-style">'+STYLE+'</style>\n<div id="app"></div>\n<script type="application/json" id="cc-state">'+JSON.stringify(state).replace(/</g,'\\u003c')+SC+'\n<script id="cc-app">'+APP+SC+'</body></html>';}
+function save(){
+  if(HOSTED){try{localStorage.setItem('jsc-board3',JSON.stringify(state));ui.dirty=false;toast('Saved on this device.');}catch(e){toast('This browser blocked saving.');}render();return;}
+  if(!art){toast('Saving isn\'t available in this view.');return;}
+  ui.saving=true;render();
+  art.publish(doc()).then(function(){ui.dirty=false;ui.saving=false;render();}).catch(function(e){ui.saving=false;var c=e&&e.code;
+    if(c==='conflict')toast('A newer version was saved. Loading it.');
+    else if(/not_writer|not_granted|not_declared|consent_required|capability_disabled/.test(c)){ui.ro=true;toast('View only: changes can\'t be saved here.');}
+    else toast('Save didn\'t go through. Try again.');render();});}
+window.addEventListener('beforeunload',function(e){if(ui.dirty&&!ui.ro){e.preventDefault();e.returnValue='';}});
+render();
+})();
+</script>
+
+</body></html>

@@ -1,0 +1,7 @@
+.DS_Store
+
+# Practice footage: never commit video files
+*.mp4
+*.mov
+*.MP4
+*.MOV
