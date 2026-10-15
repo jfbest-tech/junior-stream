@@ -13,7 +13,7 @@ Live site: https://jfbest-tech.github.io/junior-stream/
 
 Edits made on the page save in **that viewer's browser only** (`localStorage`). They are not sent anywhere, are not shared with anyone else, and do not change this repo. Clearing browser data or switching devices or browsers starts again from the version in `index.html`.
 
-Once a browser has saved edits, it keeps showing its own copy, so changes pushed to `index.html` later will not appear in that browser until its site data for this page is cleared.
+Once a browser has saved edits, it keeps showing its own copy. When you push new curriculum content, change `"rev"` in the `cc-state` JSON: every browser then takes the new skills and levels from the page, and keeps its own players, sessions and anything it added. (Level edits made only in that browser are replaced by the page's version.)
 
 ## Privacy
 
